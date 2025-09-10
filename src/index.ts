@@ -8,7 +8,7 @@ class Foo {
   }
 
   @bound public bar() {
-    console.log(this.foo);
+    console.log("instance-method".concat(this.foo));
   }
 }
 
@@ -16,5 +16,5 @@ var foo = new Foo();
 
 setTimeout(foo.bar, 500); // "hello, foo"
 
-// 测试静态方法
+// Test static method
 Foo.staticBar(); // "Static method called"
